@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+
+}
+.table {
+    width: 80%;
+    text-indent: 10px;
+}
+.titleTable {
+    text-transform: uppercase;
+    font-weight: 900;
+    height: 50px;
+    background-color: black;
+    color: aliceblue;
+    text-indent: 10px;
+}
+.titleTable td:nth-child(2){
+    text-align: center;
+}
+.titleTable td:nth-child(3){
+    text-align: center;
+}
+.linha {
+    height: 35px;
+    background-color: rgba(0,0,0,.1);
+}
+.linha td:nth-child(3){
+    text-align: center;
+}

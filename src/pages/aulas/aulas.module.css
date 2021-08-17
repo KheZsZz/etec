@@ -1,0 +1,59 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.title {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(0,0,0,.9);
+    color: #fff;
+}
+.title button {
+    width: 10%;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+}
+.subtitle {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.table {
+    margin-top: 30px;
+    width: 80%;
+    text-indent: 10px;
+}
+.titleTable {
+    text-transform: uppercase;
+    font-weight: 900;
+    height: 50px;
+    background-color: black;
+    color: aliceblue;
+    text-indent: 10px;
+    text-align: center;
+}
+
+.linha {
+    height: 35px;
+    text-align: center;
+    background-color: rgba(0,0,0,.1);
+}
+.linha td:nth-child(1){
+    text-transform: uppercase;
+}
+.linha td:nth-child(3){
+    text-align: center;
+}
+

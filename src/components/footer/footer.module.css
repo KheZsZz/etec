@@ -1,0 +1,13 @@
+.container {
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+    color: #fff;
+    font-weight: 900;
+}
