@@ -27,7 +27,7 @@ const Index = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) => {
       <br/>
       <table className={Style.table}>
         <tr className={Style.titleTable}>
-          <td>Subjects</td>
+          <td>Theme</td>
           <td>teams</td>
           <td>buttons</td>
         </tr>
