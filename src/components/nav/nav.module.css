@@ -29,7 +29,6 @@
     cursor: pointer;
     margin-left: 10px;
     border-radius: 8px;
-    border: 1px solid rgba(0,0,0,.2);
 }
 .navbar li:nth-child(1) {
     margin-left: 50px;
@@ -41,18 +40,7 @@
     align-items: center;
     justify-content: center;
 }
-.navbutton {
-    display: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-color: rgba(42, 49, 61, 1);
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    color: #fff;
-}
+
 @media (max-width:620px) {
     .navbutton {
         display: none;
