@@ -17,7 +17,7 @@ interface matter  {
   arquivos:string;
 }
 
-const TwoModule = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) => {
+const Index = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) => {
   // console.log(data);
   return (
     <div className={Style.container}>
@@ -27,9 +27,9 @@ const TwoModule = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) =>
       <br/>
       <table className={Style.table}>
         <tr className={Style.titleTable}>
-          <td>Disciplina</td>
-          <td>Equipe Teams</td>
-          <td>Buttons</td>
+          <td>Subjects</td>
+          <td>teams</td>
+          <td>buttons</td>
         </tr>
       {
         data.data.allMatters.map((matter:matter) => (
@@ -39,13 +39,13 @@ const TwoModule = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) =>
               <td>
                 <button className={Style.button}>
                 <Link href={`/aulas/${matter.initials}`}>
-                  <a> Aulas <FontAwesomeIcon icon="arrow-alt-circle-right" style={{marginLeft:5}}/></a>
+                  <a> Classes <FontAwesomeIcon icon="arrow-alt-circle-right" style={{marginLeft:5}}/></a>
                 </Link>
               </button>
 
               <button className={Style.button}>
                 <Link href={matter?.arquivos}>
-                  <a> Arquivos <FontAwesomeIcon icon="arrow-alt-circle-down" style={{marginLeft:5}}/></a>
+                  <a> Files <FontAwesomeIcon icon="arrow-alt-circle-down" style={{marginLeft:5}}/></a>
                 </Link>
               </button>
 
@@ -91,4 +91,4 @@ export const getStaticProps:GetStaticProps = async () => {
   }
 }
 
-export default TwoModule;
+export default Index;

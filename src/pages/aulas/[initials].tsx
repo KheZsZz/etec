@@ -36,7 +36,7 @@ const Aulas = ({ data, matter }: InferGetStaticPropsType <typeof getStaticProps>
                 ))}
                 <button onClick={()=>{route.push('/')}}>
                     <FontAwesomeIcon icon="arrow-alt-circle-left" style={{marginRight:5}}/>
-                    Voltar
+                    Return
                 </button>
             </div>
             <h2 className={Style.subtitle}></h2>
@@ -44,7 +44,7 @@ const Aulas = ({ data, matter }: InferGetStaticPropsType <typeof getStaticProps>
                 <tr className={StyleTable.titleTable}>
                     <td>N° classes</td>
                     <td>Date</td>
-                    <td className={Style.tableAulas}>description</td>
+                    <td className={Style.tableAulas}> Description </td>
                     <td>Buttons</td>
                 </tr>
             
@@ -57,9 +57,6 @@ const Aulas = ({ data, matter }: InferGetStaticPropsType <typeof getStaticProps>
                         </td>
                         <td>
                             <h4>{
-                                    // new Date(aula.data).getDate() + "/" 
-                                    // + new Date(aula.data).getMonth()+ "/" 
-                                    // + new Date(aula.data).getFullYear() 
                                     new Date(aula.data).toDateString()
                                 } 
                             </h4>
@@ -70,7 +67,7 @@ const Aulas = ({ data, matter }: InferGetStaticPropsType <typeof getStaticProps>
                         <td>
                             <button className={StyleTable.button}>
                                 <Link href={aula.uri}>
-                                    <a target="_blank">Assistir <FontAwesomeIcon icon="arrow-alt-circle-right" style={{marginLeft:5}}/></a>
+                                    <a target="_blank">Attend <FontAwesomeIcon icon="arrow-alt-circle-right" style={{marginLeft:5}}/></a>
                                 </Link>
                             </button>
                         </td>

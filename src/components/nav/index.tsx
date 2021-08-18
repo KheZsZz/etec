@@ -15,17 +15,17 @@ const Nav = () => {
             <ul id="listNav">
                 <li>
                     <Link href="/">
-                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} /> 1° modulo</a>
+                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} /> 1° module</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/twomodule">
-                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} />2° modulo</a>
+                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} />2° module</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/threemodule">
-                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} />3° modulo</a>
+                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} />3° module</a>
                     </Link>
                 </li>
                 {/* <li>
