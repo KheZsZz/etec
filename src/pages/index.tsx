@@ -3,13 +3,18 @@ import Link from 'next/link';
 import  Dato  from '../utils/connectDB'
 import Style from '../styles/home.module.css'
 import Nav from '../components/nav'
-import Footer from '../components/footer'
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {fas} from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 interface matter  {
   id:string;
   name:string;
   team:string;
   initials:string;
+  arquivos:string;
 }
 
 const Index = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) => {
@@ -17,7 +22,7 @@ const Index = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) => {
   return (
     <div className={Style.container}>
       <Nav/>
-      <h1>First Module</h1>
+      <h1>1° Module</h1>
       {/* <h3> Matters</h3> */}
       <br/>
       <table className={Style.table}>
@@ -31,12 +36,19 @@ const Index = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) => {
           <tr key = { matter.id } className={Style.linha}>
               <td><h4> { matter.name } </h4></td>
               <td><p> { matter.team } </p></td>
-              <td className={Style.buttons}>
-                <button>
+              <td>
+                <button className={Style.button}>
                 <Link href={`/aulas/${matter.initials}`}>
-                  <a> Aulas </a>
+                  <a> Aulas <FontAwesomeIcon icon="arrow-alt-circle-right" style={{marginLeft:5}}/></a>
                 </Link>
               </button>
+
+              <button className={Style.button}>
+                <Link href={matter?.arquivos}>
+                  <a> Arquivos <FontAwesomeIcon icon="arrow-alt-circle-down" style={{marginLeft:5}}/></a>
+                </Link>
+              </button>
+
               </td>
           </tr>
         ))
@@ -65,6 +77,7 @@ export const getStaticProps:GetStaticProps = async () => {
             name
             team
             initials
+            arquivos
         }
       }`,
     }),

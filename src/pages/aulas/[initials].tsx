@@ -3,6 +3,12 @@ import Link from 'next/link'
 import route from 'next/router'
 import  Dato  from '../../utils/connectDB';
 import Style from './aulas.module.css'
+import StyleTable from '../../styles/home.module.css'
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {fas} from '@fortawesome/free-solid-svg-icons';
+
+library.add(fas);
 
 const { dato } = Dato();
 
@@ -23,22 +29,29 @@ const Aulas = ({ data, matter }: InferGetStaticPropsType <typeof getStaticProps>
     return (
         <div className={Style.container}>
             <div className={Style.title}>
-                {matter.data.allMatters.map((title:matter)=>(<h1 key={title.initials}>{title.name}</h1>))}
-                <button onClick={()=>{route.push('/')}}>Voltar</button>
+                {matter.data.allMatters.map((title:matter)=>(
+                    <h1 key={title.initials}> 
+                        {title.name}
+                    </h1>
+                ))}
+                <button onClick={()=>{route.push('/')}}>
+                    <FontAwesomeIcon icon="arrow-alt-circle-left" style={{marginRight:5}}/>
+                    Voltar
+                </button>
             </div>
-            {/* <h2 className={Style.subtitle}>classes</h2> */}
-            <table className={Style.table}>
-                <tr className={Style.titleTable}>
+            <h2 className={Style.subtitle}></h2>
+            <table className={StyleTable.table} id="tableAulas">
+                <tr className={StyleTable.titleTable}>
                     <td>N° classes</td>
                     <td>Date</td>
-                    <td>description</td>
+                    <td className={Style.tableAulas}>description</td>
                     <td>Buttons</td>
                 </tr>
             
 
             {
                 data.data.allAulas.map((aula:aula) => (
-                    <tr key = { aula.id } className={Style.linha}>
+                    <tr key = { aula.id } className={StyleTable.linha}>
                         <td>
                             <h3>{aula.descript}</h3>
                         </td>
@@ -51,13 +64,13 @@ const Aulas = ({ data, matter }: InferGetStaticPropsType <typeof getStaticProps>
                                 } 
                             </h4>
                         </td>
-                        <td>
+                        <td className={Style.tableAulas}>
                             <h4>{aula.description}</h4>
                         </td>
-                        <td className={Style.buttons}>
-                            <button>
+                        <td>
+                            <button className={StyleTable.button}>
                                 <Link href={aula.uri}>
-                                    <a target="_blank">Assistir</a>
+                                    <a target="_blank">Assistir <FontAwesomeIcon icon="arrow-alt-circle-right" style={{marginLeft:5}}/></a>
                                 </Link>
                             </button>
                         </td>
