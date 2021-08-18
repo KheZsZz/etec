@@ -35,9 +35,9 @@ const Nav = () => {
                 </li> */}
             </ul>
 
-            <button className={Style.navbutton}>
+            {/* <button className={Style.navbutton}>
                 <FontAwesomeIcon icon="align-justify" />
-            </button>
+            </button> */}
         </nav>
     );
 }
