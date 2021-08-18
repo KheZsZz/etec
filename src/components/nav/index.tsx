@@ -28,11 +28,11 @@ const Nav = () => {
                         <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} />3° modulo</a>
                     </Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link href="/prof">
                         <a><FontAwesomeIcon icon="address-book" style={{ marginRight: 5 }} />Professores</a>
                     </Link>
-                </li>
+                </li> */}
             </ul>
 
             <button className={Style.navbutton}>
