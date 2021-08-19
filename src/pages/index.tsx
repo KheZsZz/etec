@@ -14,11 +14,9 @@ interface matter  {
   name:string;
   team:string;
   initials:string;
-  arquivos:string;
 }
 
 const Index = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) => {
-  // console.log(data);
   return (
     <div className={Style.container}>
       <Nav/>
@@ -40,12 +38,6 @@ const Index = ({ data }: InferGetStaticPropsType <typeof getStaticProps>) => {
                 <button className={Style.button}>
                 <Link href={`/aulas/${matter.initials}`}>
                   <a> Classes <FontAwesomeIcon icon="arrow-alt-circle-right" style={{marginLeft:5}}/></a>
-                </Link>
-              </button>
-
-              <button className={Style.button}>
-                <Link href={matter?.arquivos}>
-                  <a> Files <FontAwesomeIcon icon="arrow-alt-circle-down" style={{marginLeft:5}}/></a>
                 </Link>
               </button>
 
@@ -77,7 +69,6 @@ export const getStaticProps:GetStaticProps = async () => {
             name
             team
             initials
-            arquivos
         }
       }`,
     }),

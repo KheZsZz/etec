@@ -23,6 +23,7 @@ interface aula {
     descript:string;
     uri:string;
     matter:string;
+    files:string
 }
 
 const Aulas = ({ data, matter }: InferGetStaticPropsType <typeof getStaticProps>) => {
@@ -68,6 +69,12 @@ const Aulas = ({ data, matter }: InferGetStaticPropsType <typeof getStaticProps>
                             <button className={StyleTable.button}>
                                 <Link href={aula.uri}>
                                     <a target="_blank">Attend <FontAwesomeIcon icon="arrow-alt-circle-right" style={{marginLeft:5}}/></a>
+                                </Link>
+                            </button>
+
+                            <button className={StyleTable.button}>
+                                <Link href={aula?.files}>
+                                    <a target="_blank"> Files <FontAwesomeIcon icon="arrow-alt-circle-down" style={{marginLeft:5}}/></a>
                                 </Link>
                             </button>
                         </td>
@@ -120,6 +127,7 @@ export const getStaticProps:GetStaticProps = async (context) => {
               descript
               data
               description
+              files
             }
           }`,}),
     });
