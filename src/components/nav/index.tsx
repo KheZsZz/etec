@@ -15,29 +15,20 @@ const Nav = () => {
             <ul id="listNav">
                 <li>
                     <Link href="/">
-                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} /> 1° module</a>
+                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} /> 1° modulo</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/twomodule">
-                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} />2° module</a>
+                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} />2° modulo</a>
                     </Link>
                 </li>
                 <li>
                     <Link href="/threemodule">
-                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} />3° module</a>
+                        <a><FontAwesomeIcon icon="atlas" style={{ marginRight: 5 }} />3° modulo</a>
                     </Link>
                 </li>
-                {/* <li>
-                    <Link href="/prof">
-                        <a><FontAwesomeIcon icon="address-book" style={{ marginRight: 5 }} />Professores</a>
-                    </Link>
-                </li> */}
             </ul>
-
-            {/* <button className={Style.navbutton}>
-                <FontAwesomeIcon icon="align-justify" />
-            </button> */}
         </nav>
     );
 }
