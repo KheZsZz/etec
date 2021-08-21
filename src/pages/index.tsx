@@ -30,7 +30,7 @@ const Index = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
           <td></td>
         </tr>
         {
-          data.data.allMatters.map((matter: matter) => (
+          data?.data.allMatters.map((matter: matter) => (
             <tr key={matter.id} className={Style.linha}>
               <td><h4> {matter.name} </h4></td>
               <td><p> {matter.team} </p></td>
