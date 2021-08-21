@@ -30,7 +30,7 @@ const Aulas = ({ data, matter }: InferGetStaticPropsType<typeof getStaticProps>)
     return (
         <div className={Style.container}>
             <div className={Style.title}>
-                {matter.data.allMatters.map((title: matter) => (
+                {matter?.data.allMatters.map((title: matter) => (
                     <h1 key={title.initials}>
                         {title.name}
                     </h1>
@@ -49,7 +49,7 @@ const Aulas = ({ data, matter }: InferGetStaticPropsType<typeof getStaticProps>)
                     <td></td>
                 </tr>
                 {
-                    data.data.allAulas.map((aula: aula) => (
+                    data?.data.allAulas.map((aula: aula) => (
                         <tr key={aula.id} className={StyleTable.linha}>
                             <td>
                                 <h3>{aula.descript}</h3>
@@ -149,8 +149,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
         }),
     });
 
-    const data = await res.json();
-    const matter = await resMatter.json();
+    const data:aula = await res.json();
+    const matter:matter = await resMatter.json();
 
     return {
         props: {
