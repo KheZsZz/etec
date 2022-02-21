@@ -7,4 +7,5 @@ Projetos descontinuado... (Aulas retornaram precenciais!!! Quem sabe esse projet
 
 # @Técnologias
 
-Projeto desenvolvido com framework `Next.js`, (https://nextjs.org/) e ferramenta CMS `DatoCMS` (https://www.datocms.com/)
+Projeto desenvolvido com framework `Next.js`, (https://nextjs.org/) e ferramenta CMS `DatoCMS` (https://www.datocms.com/). Primeiro projeto com `TypeScript` (https://www.typescriptlang.org/)...
+
